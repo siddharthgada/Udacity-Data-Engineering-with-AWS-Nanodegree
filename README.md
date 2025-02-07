@@ -29,3 +29,5 @@ Proficiencies used: Python, Apache Cassandra(CQL), Denormalization
 ### Skills Acquired:
 - Practiced ETL steps from a 3NF database to a Star Schema
 - Practiced slicing, dicing, Roll Up and Drill Down operations with OLAP cubes
+
+Proficiencies used: SQL, Normalization, Denormalization

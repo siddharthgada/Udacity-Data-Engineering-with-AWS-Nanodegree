@@ -46,8 +46,6 @@ This project involves the following key components:
   - Python Code: Includes ETL pipeline code to process and load data into Cassandra.
 2. SQL Queries
   - Written and tested SQL queries to answer specific business questions from the event data.
-3. Final Reports
-  - Results from running the queries and any issues encountered.
 
 📊 Technologies & Tools Used <br>
 1. Apache Cassandra: NoSQL database to store and retrieve structured event data.

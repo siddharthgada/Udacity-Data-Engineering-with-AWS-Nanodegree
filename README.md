@@ -1,4 +1,4 @@
-# Data-Engineering
+# Data Engineering
 
 # Project 1: Relational Databases - Data Modeling with PostgreSQL.
 Developed a relational database using PostgreSQL to model user activity data for a music streaming app. <br>

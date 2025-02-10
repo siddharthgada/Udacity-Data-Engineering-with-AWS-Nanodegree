@@ -53,10 +53,10 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 
 ## Results & Song Play Analysis
 After successfully loading the data into Redshift, we can perform song play analysis to gain insights into user listening behaviour. Below are some example queries and their corresponding results. <br>
-Query 1 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query1.png>...</a> <br>
-Query 1 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query1Results.png>...</a> <br>
-Query 2 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query2.png>...</a> <br>
-Query 2 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query2Results.png>...</a> <br>
+Query 1 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Queries/Query1.png>...</a> <br>
+Query 1 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Queries/Query1Results.png>...</a> <br>
+Query 2 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Queries/Query2.png>...</a> <br>
+Query 2 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Queries/Query2Results.png>...</a> <br>
 ### Findings
 - From Query 1: We can see the top 5 artist names that were heard the most by a single user
 - From Query 2: We can see the top 5 songs heard with artist details

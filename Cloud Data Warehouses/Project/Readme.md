@@ -40,7 +40,7 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 
 1️⃣ Load Staging Tables <br>
 - Data is extracted from S3 and loaded into staging tables using COPY for efficiency.
-- Staging tables hold raw data before transformation.
+- Staging tables hold raw data before transformation.<br>
 2️⃣ Load Final Tables <br>
 - SQL INSERT ... SELECT queries transform and load data from staging to fact/dimension tables.
 - Data cleaning and filtering occur here.

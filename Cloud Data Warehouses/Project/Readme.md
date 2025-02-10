@@ -58,7 +58,7 @@ Query 1 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/
 Query 2 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query2.png>...</a> <br>
 Query 2 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query2Results.png>...</a> <br>
 ### Findings
-- From Query 1: We can see the top 5 songs heard, with the song details and the user_id
+- From Query 1: We can see the top 5 artist names that were heard the most by a single user
 - From Query 2: We can see the top 5 songs heard with artist details
 
 ## Key Learning Outcomes

@@ -30,6 +30,28 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 - songs: Stores song details.
 - artists: Stores artist details.
 - time: Stores timestamps of song plays.
+### Justification
+- Redshift Optimization: Fact-Dimension separation enables efficient columnar storage and compression.
+- Join Performance: Foreign key relationships help in fast lookups.
+- Query Speed: The star schema is well-suited for analytical workloads.
+
+### ETL Pipeline Design
+- The ETL pipeline processes and loads data into Redshift in two stages:
+
+1️⃣ Load Staging Tables <br>
+- Data is extracted from S3 and loaded into staging tables using COPY for efficiency.
+- Staging tables hold raw data before transformation.
+2️⃣ Load Final Tables <br>
+- SQL INSERT ... SELECT queries transform and load data from staging to fact/dimension tables.
+- Data cleaning and filtering occur here.
+### Justification
+- Scalability: Using S3 + Redshift enables fast, scalable data processing.
+- Performance: COPY command speeds up large data loads compared to INSERT.
+- Data Integrity: Staging tables prevent corrupt or incomplete data from reaching the final tables.
+- This design ensures high performance, maintainability, and efficiency for large-scale analytics. 
+
+## Results & Song Play Analysis
+After successfully loading the data into Redshift, we can perform song play analysis to gain insights into user listening behaviour. Below are some example queries and their corresponding results.
 
 ## Key Learning Outcomes
 ✅ AWS Redshift: Setting up and managing a cloud-based data warehouse. <br>

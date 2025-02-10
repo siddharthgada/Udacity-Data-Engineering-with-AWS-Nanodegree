@@ -16,8 +16,8 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 - Verified table schemas using AWS Redshift Query Editor.
 2. Build ETL Pipeline
 - Implemented etl.py to:
--- Load raw data from S3 to Redshift staging tables.
--- Transform and insert data into fact and dimension tables.
+  - Load raw data from S3 to Redshift staging tables.
+  - Transform and insert data into fact and dimension tables.
 - Tested the pipeline by running etl.py and validating data in Redshift.
 3. Cleanup
 - Deleted the Redshift cluster after completing the project to avoid unnecessary costs.

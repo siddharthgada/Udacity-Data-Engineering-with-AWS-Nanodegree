@@ -32,21 +32,21 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 - time: Stores timestamps of song plays.
 
 ## Key Learning Outcomes
-✅ AWS Redshift: Setting up and managing a cloud-based data warehouse.
-✅ SQL & Schema Design: Implementing a star schema with optimized queries.
-✅ ETL Process: Loading large datasets efficiently from S3 to Redshift.
-✅ Python & Boto3: Automating infrastructure using Python scripts.
+✅ AWS Redshift: Setting up and managing a cloud-based data warehouse. <br>
+✅ SQL & Schema Design: Implementing a star schema with optimized queries.<br>
+✅ ETL Process: Loading large datasets efficiently from S3 to Redshift.<br>
+✅ Python & Boto3: Automating infrastructure using Python scripts.<br>
 
-How to Run the Project
-1️⃣ Update dwh.cfg with Redshift database and IAM role details.
-2️⃣ Run sql_queries.py to create statements to be imported in create_table.py and etl.py files.
-3️⃣ Run create_tables.py to create tables in Redshift.
-4️⃣ Run etl.py to load and transform data.
-5️⃣ Verify data by querying tables in Redshift Query Editor.
-6️⃣ Delete Redshift Cluster to avoid charges.
+## How to Run the Project<br>
+1️⃣ Update dwh.cfg with Redshift database and IAM role details.<br>
+2️⃣ Run sql_queries.py to create statements to be imported in create_table.py and etl.py files.<br>
+3️⃣ Run create_tables.py to create tables in Redshift.<br>
+4️⃣ Run etl.py to load and transform data.<br>
+5️⃣ Verify data by querying tables in Redshift Query Editor.<br>
+6️⃣ Delete Redshift Cluster to avoid charges.<br>
 
-Technologies Used
-🔹 AWS Redshift
-🔹 AWS S3
-🔹 PostgreSQL (Redshift dialect)
-🔹 Python (psycopg2, boto3)
+## Technologies Used
+🔹 AWS Redshift<br>
+🔹 AWS S3<br>
+🔹 PostgreSQL (Redshift dialect)<br>
+🔹 Python (psycopg2)<br>

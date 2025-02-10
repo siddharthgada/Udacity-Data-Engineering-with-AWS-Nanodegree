@@ -29,5 +29,13 @@ Proficiencies used: Python, Apache Cassandra(CQL), Denormalization
 ### Skills Acquired:
 - Practiced ETL steps from a 3NF database to a Star Schema
 - Practiced slicing, dicing, Roll Up and Drill Down operations with OLAP cubes
+- Using ETL and ELT techniques
+- Using Relational and NoSQL databases in the cloud
+- Creating an IAM role and user, security group, S3 bucket, PostgreSQL Database
+- Launching a Redshift Cluster
+- How to ETL with Redshift
+- How to ingest data into Redshift using S3 buckets
+- Parallel ETL
+- Optimizing Table Design using Distribution Styles
 
-Proficiencies used: SQL, Normalization, Denormalization
+Proficiencies used: SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, Normalization, Denormalization

@@ -51,7 +51,7 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 - This design ensures high performance, maintainability, and efficiency for large-scale analytics. 
 
 ## Results & Song Play Analysis
-After successfully loading the data into Redshift, we can perform song play analysis to gain insights into user listening behaviour. Below are some example queries and their corresponding results.
+After successfully loading the data into Redshift, we can perform song play analysis to gain insights into user listening behaviour. Below are some example queries and their corresponding results. <br>
 Query 1 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query1.png>...</a> <br>
 Query 1 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query1Results.png>...</a> <br>
 Query 2 Link: <a href=https://github.com/siddharthgada/Data-Engineering/blob/main/Cloud%20Data%20Warehouses/Project/Query2.png>...</a> <br>

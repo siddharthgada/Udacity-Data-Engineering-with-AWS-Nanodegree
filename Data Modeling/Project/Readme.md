@@ -29,13 +29,14 @@ This project involves the following key components:
 
 🔍 Key Learning Outcomes: <br>
 📌 Designing NoSQL Databases <br>
-  - Learned how to design a Cassandra database schema for event-based data, ensuring efficient querying and data storage in a distributed database environment. <br>
+  - Learned how to design a Cassandra database schema for event-based data, ensuring efficient querying and data storage in a distributed     database environment. <br>
 📌 Data Processing and ETL Pipelines<br>
-  - Gained experience in ETL processes by writing Python code to process raw event data into a structured format and load it into Apache Cassandra. <br>
+  - Gained experience in ETL processes by writing Python code to process raw event data into a structured format and load it into Apache      Cassandra. <br>
 📌 Apache Cassandra Syntax<br>
-  - Familiarized with Cassandra Query Language (CQL) for creating and managing keyspaces, tables, and inserting records into a distributed NoSQL database. <br>
-📌 Performance Optimization<br>
-  - Learned how to design data models that allow for quick query performance, using partition keys, clustering columns, and understanding Cassandra's limitations and optimizations. <br>
+  - Familiarized with Cassandra Query Language (CQL) for creating and managing keyspaces, tables, and inserting records into a      
+    distributed NoSQL database. <br>
+📌 Performance Optimization <br>
+  - Learned how to design data models that allow for quick query performance, using partition keys, clustering columns, and understanding     Cassandra's limitations and optimizations. <br>
 
 📂 Project Deliverables:<br>
 1. Data Loading and ETL Pipeline

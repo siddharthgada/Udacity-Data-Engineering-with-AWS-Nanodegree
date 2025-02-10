@@ -16,7 +16,8 @@ def load_staging_tables(cur, conn):
     for query in copy_table_queries:
         cur.execute(query)
         conn.commit()
-'''This function loads data from AWS S3 into Redshift staging tables using the COPY command. copy_table_queries is a list of SQL COPY statements. Each query loads data from an S3 bucket into a staging table in Redshift. It extracts raw data from S3 storage, loads it into staging tables in Redshift and ensures committed transactions for data integrity.'''
+'''This function loads data from AWS S3 into Redshift staging tables using the COPY command. copy_table_queries is a list of SQL COPY statements. 
+Each query loads data from an S3 bucket into a staging table in Redshift. It extracts raw data from S3 storage, loads it into staging tables in Redshift and ensures committed transactions for data integrity.'''
 
 # In[ ]:
 

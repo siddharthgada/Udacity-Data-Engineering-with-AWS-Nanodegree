@@ -27,8 +27,7 @@ This project involves the following key components:
   - Executed the queries provided in the template against the newly created tables.
   - Ensured that queries return the expected results and are optimized for performance, especially with large datasets.
 
-🔍 Key Learning Outcomes:<br>
-
+🔍 Key Learning Outcomes: <br>
 📌 Designing NoSQL Databases <br>
   - Learned how to design a Cassandra database schema for event-based data, ensuring efficient querying and data storage in a distributed database environment. <br>
 📌 Data Processing and ETL Pipelines<br>

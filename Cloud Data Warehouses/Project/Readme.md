@@ -65,7 +65,7 @@ Query 2 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/
 ✅ AWS Redshift: Setting up and managing a cloud-based data warehouse. <br>
 ✅ SQL & Schema Design: Implementing a star schema with optimized queries.<br>
 ✅ ETL Process: Loading large datasets efficiently from S3 to Redshift.<br>
-✅ Python & Boto3: Automating infrastructure using Python scripts.<br>
+✅ Python: Automating infrastructure using Python scripts.<br>
 
 ## How to Run the Project<br>
 1️⃣ Update dwh.cfg with Redshift database and IAM role details.<br>

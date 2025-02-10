@@ -36,7 +36,7 @@ As their data engineer, I was tasked with building an ETL pipeline that extracts
 - Query Speed: The star schema is well-suited for analytical workloads.
 
 ### ETL Pipeline Design
-- The ETL pipeline processes and loads data into Redshift in two stages:
+#### The ETL pipeline processes and loads data into Redshift in two stages:
 
 1️⃣ Load Staging Tables <br>
 - Data is extracted from S3 and loaded into staging tables using COPY for efficiency.

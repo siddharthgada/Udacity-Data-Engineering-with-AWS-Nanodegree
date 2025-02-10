@@ -38,4 +38,4 @@ Proficiencies used: Python, Apache Cassandra(CQL), Denormalization
 - Parallel ETL
 - Optimizing Table Design using Distribution Styles
 
-Proficiencies used: SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, Normalization, Denormalization
+Proficiencies used: SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, AWS IAM, Normalization, Denormalization

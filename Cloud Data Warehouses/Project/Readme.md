@@ -1,5 +1,4 @@
-# Project: Data Warehouse for Sparkify
-
+# ETL and Data Modeling for Music Streaming Service Project
 ## Introduction:
 A music streaming startup, Sparkify, has grown its user base and song database and wants to move its processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 

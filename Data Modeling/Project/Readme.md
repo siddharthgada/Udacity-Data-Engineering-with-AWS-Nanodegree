@@ -1,4 +1,4 @@
-# Apache Cassandra Data Modeling and ETL Pipeline Project
+# NoSQL Data Modeling and ETL Pipeline Project for Music Streaming Service 
 This repository contains my solution for the Apache Cassandra Data Modeling and ETL Pipeline Project, which focuses on processing event data, 
 creating a NoSQL data model, and loading it into Apache Cassandra. The project template includes steps for designing tables, processing data 
 and executing queries.

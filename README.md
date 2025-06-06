@@ -39,3 +39,9 @@ Proficiencies used: Python, Apache Cassandra(CQL), Denormalization
 - Optimizing Table Design using Distribution Styles
 
 Proficiencies used: SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, AWS IAM, Normalization, Denormalization
+
+  ## 👤 Author
+
+**Siddharth Gada**  
+📧 Email: gadasiddharth@gmail.com 
+🔗 LinkedIn: [[your-link]  ](https://www.linkedin.com/in/siddharthgada/)

@@ -43,5 +43,5 @@ Proficiencies used: SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, AWS IAM, Nor
   ## 👤 Author
 
 **Siddharth Gada**  
-📧 Email: gadasiddharth@gmail.com 
-🔗 LinkedIn: [[your-link]  ](https://www.linkedin.com/in/siddharthgada/)
+📧 Email: gadasiddharth@gmail.com <br>
+🔗 [LinkedIn] (https://www.linkedin.com/in/siddharthgada/)

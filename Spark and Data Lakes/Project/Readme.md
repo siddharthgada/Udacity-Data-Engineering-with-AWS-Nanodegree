@@ -65,7 +65,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
  | accelerometer_trusted | 	40,981	 | Only data from users who opted in.
  | step_trainer_landing | 	28,680	 | Raw IoT readings.
  | step_trainer_trusted	 | 14,460	 | Data filtered by presence in customers_curated.
- | machine_learning_curated | 	43,681	 | Final dataset ready for ML.
+ | machine_learning_curated | 	43,681	 | Final dataset ready for Data Science Team.
 
 ## 📁 Project Structure:<br>
 

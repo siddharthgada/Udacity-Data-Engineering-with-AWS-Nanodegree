@@ -61,19 +61,18 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 
 📁 Project Structure:<br>
 .
-├── glue_jobs/
-│   ├── customer_landing_to_trusted.py
-│   ├── accelerometer_landing_to_trusted.py
-│   ├── step_trainer_landing_to_trusted.py
-│   ├── customer_trusted_to_curated.py
-│   ├── machine_learning_curated.py
-├── sql_ddls/
-│   ├── customer_landing.sql
-│   ├── accelerometer_landing.sql
-│   └── step_trainer_landing.sql
-├── screenshots/
-│   ├── athena_queries/
-│   └── glue_job_configs/
+├── glue_jobs/ <br>
+│   ├── customer_landing_to_trusted.py <br> 
+│   ├── accelerometer_landing_to_trusted.py <br>
+│   ├── step_trainer_landing_to_trusted.py<br>
+│   ├── customer_trusted_to_curated.py<br>
+│   ├── machine_learning_curated.py<br>
+├── sql_ddls/<br>
+│   ├── customer_landing.sql<br>
+│   ├── accelerometer_landing.sql<br>
+│   └── step_trainer_landing.sql<br>
+├── screenshots/<br>
+│   ├── athena_queries/<br>
 └── Readme.md
 
 💡 Key Learnings: 

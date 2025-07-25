@@ -79,3 +79,9 @@ Query 2 Results Link: <a href=https://github.com/siddharthgada/Data-Engineering/
 🔹 AWS S3<br>
 🔹 PostgreSQL (Redshift dialect)<br>
 🔹 Python (psycopg2)<br>
+
+  ## 👤 Author
+
+**Siddharth Gada**  
+📧 Email: gadasiddharth@gmail.com <br>
+🔗 LinkedIn: https://www.linkedin.com/in/siddharthgada/

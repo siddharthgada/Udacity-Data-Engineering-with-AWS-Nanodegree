@@ -59,23 +59,28 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
  | customers_curated	 | 464	 | Joined customers with valid accelerometer data.
  | machine_learning_curated | 	34,437	 | Final dataset ready for ML.
 
-🔍 Key Learning Outcomes: <br>
-📌 Designing NoSQL Databases <br>
-  - Learned how to design a Cassandra database schema for event-based data, ensuring efficient querying and data storage in a distributed     database environment. <br>
-📌 Data Processing and ETL Pipelines<br>
-  - Gained experience in ETL processes by writing Python code to process raw event data into a structured format and load it into Apache      Cassandra. <br>
-📌 Apache Cassandra Syntax<br>
-  - Familiarized with Cassandra Query Language (CQL) for creating and managing keyspaces, tables, and inserting records into a      
-    distributed NoSQL database. <br>
-📌 Performance Optimization <br>
-  - Learned how to design data models that allow for quick query performance, using partition keys, clustering columns, and understanding     Cassandra's limitations and optimizations. <br>
+📁 Project Structure:<br>
+.
+├── glue_jobs/
+│   ├── customer_landing_to_trusted.py
+│   ├── accelerometer_landing_to_trusted.py
+│   ├── step_trainer_landing_to_trusted.py
+│   ├── customer_trusted_to_curated.py
+│   ├── machine_learning_curated.py
+├── sql_ddls/
+│   ├── customer_landing.sql
+│   ├── accelerometer_landing.sql
+│   └── step_trainer_landing.sql
+├── screenshots/
+│   ├── athena_queries/
+│   └── glue_job_configs/
+└── Readme.md
 
-📂 Project Deliverables:<br>
-1. Data Loading and ETL Pipeline
-  - Processed raw CSV files into a denormalized format.
-  - Python Code: Includes ETL pipeline code to process and load data into Cassandra.
-2. SQL Queries
-  - Written and tested SQL queries to answer specific business questions from the event data.
+💡 Key Learnings: 
+- Schema Evolution: Used Glue's dynamic schema update options for handling evolving JSON.
+- Privacy-First Design: Ensured only users with explicit consent are retained throughout the pipeline.
+- Efficient Joins in Glue Studio: SQL Transform nodes produced more consistent and performant outputs than built-in Join nodes.
+- Partitioning & Filtering: Reduced unnecessary data writes by filtering and selecting relevant columns at each stage.
 
 📊 Technologies & Tools Used: <br>
 1. Apache Cassandra: NoSQL database to store and retrieve structured event data.

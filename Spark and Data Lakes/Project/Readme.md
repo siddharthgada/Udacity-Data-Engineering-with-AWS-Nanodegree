@@ -61,27 +61,33 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 
 📁 Project Structure:<br>
 .
-├── glue_jobs/ <br>
-│   ├── customer_landing_to_trusted.py <br> 
-│   ├── accelerometer_landing_to_trusted.py <br>
-│   ├── step_trainer_landing_to_trusted.py<br>
-│   ├── customer_trusted_to_curated.py<br>
-│   ├── machine_learning_curated.py<br>
-├── sql_ddls/<br>
+├── Glue Jobs/ <br>
+│   ├── Customer Landing to Trusted.py <br> 
+│   ├── Accelerometer Landing to Trusted.py <br>
+│   ├── Step Trainer Landing to Trusted.py<br>
+│   ├── Customer Trusted to Curated.py<br>
+│   ├── Machine Learning Curated.py<br>
+├── SQL DDL/<br>
 │   ├── customer_landing.sql<br>
 │   ├── accelerometer_landing.sql<br>
-│   └── step_trainer_landing.sql<br>
-├── screenshots/<br>
+│   └── steptrainer_landing.sql<br>
+├── Screenshots/<br>
 │   ├── athena_queries/<br>
 └── Readme.md
 
+📸 Screenshots
+📁 Located in /Screenshots:
+- Glue Studio Job configurations
+- Athena queries showing row counts and joins
+
 💡 Key Learnings: 
-- Schema Evolution: Used Glue's dynamic schema update options for handling evolving JSON.
-- Privacy-First Design: Ensured only users with explicit consent are retained throughout the pipeline.
-- Efficient Joins in Glue Studio: SQL Transform nodes produced more consistent and performant outputs than built-in Join nodes.
-- Partitioning & Filtering: Reduced unnecessary data writes by filtering and selecting relevant columns at each stage.
+1. Schema Evolution: Used Glue's dynamic schema update options for handling evolving JSON.
+2. Privacy-First Design: Ensured only users with explicit consent are retained throughout the pipeline.
+3. Efficient Joins in Glue Studio: SQL Transform nodes produced more consistent and performant outputs than built-in Join nodes.
+4. Partitioning & Filtering: Reduced unnecessary data writes by filtering and selecting relevant columns at each stage.
 
 📊 Technologies & Tools Used: <br>
-1. Apache Cassandra: NoSQL database to store and retrieve structured event data.
-2. Python (Pandas): Used for processing the event data and handling the ETL pipeline.
-3. Cassandra Query Language (CQL): Used for creating tables, inserting data, and querying the database.
+1. AWS Glue Studio – Visual and code-based ETL orchestration
+2. Amazon Athena – Querying structured data in S3
+3. Amazon S3 – Scalable object storage for each data zone
+4. JSON – Source data format

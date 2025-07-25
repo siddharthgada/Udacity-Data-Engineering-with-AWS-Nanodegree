@@ -49,3 +49,9 @@ This project involves the following key components:
 1. Apache Cassandra: NoSQL database to store and retrieve structured event data.
 2. Python (Pandas): Used for processing the event data and handling the ETL pipeline.
 3. Cassandra Query Language (CQL): Used for creating tables, inserting data, and querying the database.
+
+  ## 👤 Author
+
+**Siddharth Gada**  
+📧 Email: gadasiddharth@gmail.com <br>
+🔗 LinkedIn: https://www.linkedin.com/in/siddharthgada/

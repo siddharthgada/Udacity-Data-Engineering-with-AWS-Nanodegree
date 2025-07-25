@@ -7,11 +7,11 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 
 ## ✅ Project Pipeline <br>
 
-## 🛡️ AWS Configuration
+### 🛡️ AWS Configuration
 1. IAM Role: Custom IAM roles were created with least-privilege access to allow Glue Jobs to read/write to specific S3 buckets.
 2. VPC Endpoint: A VPC Gateway Endpoint was created for secure, high-throughput access from AWS Glue to S3, avoiding public internet.
   
-## 📥 Table Creation & Data Loading
+### 📥 Table Creation & Data Loading
 - Created Landing Zone Glue tables for:
     - customer_landing
     - accelerometer_landing
@@ -19,7 +19,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 - Used AWS Glue to create the database and the above tables in the designated Glue Data Catalog Database.
 - Loaded raw JSON data directly from Amazon S3 into these tables, enabling downstream ETL transformations and querying via Athena.
     
-## 🛠 Glue Jobs
+### 🛠 Glue Jobs
 1. Landing to Trusted Zone
 - Customer Landing to Trusted.py
     - Goal: Sanitize customer data to retain only users who agreed to share data for research (Filters out records with missing shareWithResearchAsOfDate).
@@ -35,7 +35,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Goal: Store Step Trainer IoT records only for customers who have both accelerometer data and have agreed to share their data.
     - Logic: Inner join step_trainer_landing with customer_curated on serialNumber.
 
-### 🛠 Data Quality Fix: Step Trainer Serial Number Bug
+#### 🛠 Data Quality Fix: Step Trainer Serial Number Bug
 During data validation, a major data quality issue was discovered:
 
 The serialNumber field in the Customer data (Landing Zone) was not unique. Due to a defect in the fulfillment website, the same 30 serial numbers were reused across millions of customers. As a result, we cannot reliably associate Step Trainer IoT records with Customer records using serial numbers.
@@ -51,12 +51,12 @@ However, the Step Trainer IoT data (Landing Zone) contains the correct serial nu
     - Input: step_trainer_landing and customers_curated.
     - Logic: Inner join on serialNumber to retain only Step Trainer records from customers in the customers_curated dataset.
 
-### ✅ Benefits of the Fix
+#### ✅ Benefits of the Fix
 - Ensures only valid, consenting users are included in downstream analytics.
 - Resolves serialNumber duplication issue by filtering via sensor activity, not fulfillment data.
 - Produces clean, trustworthy machine learning datasets for health tracking applications.
 
-## 🛠 Glue Jobs Summary <br>
+### 🛠 Glue Jobs Summary <br>
 | Glue Job | Description|
 |:---:|:---:|
 | Customer Landing to Trusted.py | Filters customers with non-null shareWithResearchAsOfDate.|
@@ -65,7 +65,7 @@ However, the Step Trainer IoT data (Landing Zone) contains the correct serial nu
 | Customer Trusted to Curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.|
 | Machine Learning Curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.|
 
-## 🔍 Row Counts (Validated via Athena)
+### 🔍 Row Counts (Validated via Athena)
  | Table	 | Row Count	 | Notes
  |:---:|:---:|:---:|
  | customer_landing	 | 956	 | Includes rows with missing shareWithResearchAsOfDate.

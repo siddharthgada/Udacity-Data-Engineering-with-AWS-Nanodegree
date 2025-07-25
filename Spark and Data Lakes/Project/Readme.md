@@ -6,20 +6,45 @@ This repository contains my solution for a serverless data lake project using AW
 This project demonstrates a modern data lake architecture using AWS Glue to process and transform raw JSON data stored in S3 into clean, queryable formats accessible through Amazon Athena. The data represents customers, accelerometer sensor readings, and step trainer devices.
 
 ✅ Project Pipeline <br>
-🧾 Data Sources (Landing Zone) <br>
-- S3 JSON files for: <br>
-    - customer_landing <br>
-    - accelerometer_landing <br>
-    - step_trainer_landing
-    
-2. ETL Pipeline Development
-  - Implemented logic in Part I of the notebook to iterate through raw event files (event_datafile_new.csv) and processed them into a new, denormalized CSV format.
-  - Edited Part II of the notebook to include Cassandra CREATE and INSERT statements that will load the processed records into the relevant tables in the data model.
-  - Tested the ETL pipeline by running SELECT statements to verify the data load.
 
-3. Running Queries
-  - Executed the queries provided in the template against the newly created tables.
-  - Ensured that queries return the expected results and are optimized for performance, especially with large datasets.
+🧾 Data Sources (Landing Zone): <br>
+- Raw JSON files are ingested into Amazon S3 from: <br>
+    - Website Form: customer_landing <br>
+    - Mobile App: accelerometer_landing <br>
+    - IoT Device: step_trainer_landing
+    
+🛠 Glue Jobs
+1. Landing to Trusted Zone
+- Customer Landing to Trusted.py
+    - Goal: Sanitize customer data to retain only users who agreed to share data for research (Filters out records with missing shareWithResearchAsOfDate).
+    - Logic: Drop any customer record missing shareWithResearchAsOfDate.
+    - Writes cleaned customer data to customer_trusted.
+
+- Accelerometer Landing to Trusted.py
+    - Goal: Retain only accelerometer readings from users who consented to share data.
+    - Logic: Inner join accelerometer_landing with customer_trusted on email.
+    - Outputs only accelerometer fields into accelerometer_trusted.
+
+- Step Trainer Landing to Trusted.py
+    - Goal: Store Step Trainer IoT records only for customers who have both accelerometer data and have agreed to share their data.
+    - Logic: Inner join step_trainer_landing with customer_curated on serialNumber.
+
+2. Trusted to Curated Zone
+- Customer Trusted to Curated.py
+    - Goal: Identify customers who have both accelerometer data and have agreed to share their data.
+    - Logic: Join customer_trusted and accelerometer_trusted on email, keeping only customer fields.
+
+- Machine Learning Curated.py
+    - Goal: Aggregate sensor data for machine learning analysis.
+    - Logic: Join step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
+
+🛠 Glue Jobs Summary
+Glue Job | Description
+customer_landing_to_trusted.py | Filters customers with non-null shareWithResearchAsOfDate.
+accelerometer_landing_to_trusted.py | Joins raw accelerometer data with customer_trusted using email.
+customer_trusted_to_curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.
+step_trainer_landing_to_trusted.py | Filters IoT records for customers in customers_curated.
+machine_learning_curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
 
 🔍 Key Learning Outcomes: <br>
 📌 Designing NoSQL Databases <br>

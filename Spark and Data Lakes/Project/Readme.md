@@ -5,7 +5,7 @@ This repository contains my solution for a serverless data lake project using AW
 
 This project demonstrates a modern data lake architecture using AWS Glue to process and transform raw JSON data stored in S3 into clean, queryable formats accessible through Amazon Athena. The data represents customers, accelerometer sensor readings, and step trainer devices.
 
-✅ Project Pipeline <br>
+## ✅ Project Pipeline <br>
 
 🧾 Data Sources (Landing Zone): <br>
 - Raw JSON files are ingested into Amazon S3 from: <br>
@@ -13,7 +13,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Mobile App: accelerometer_landing <br>
     - IoT Device: step_trainer_landing
     
-🛠 Glue Jobs
+## 🛠 Glue Jobs
 1. Landing to Trusted Zone
 - Customer Landing to Trusted.py
     - Goal: Sanitize customer data to retain only users who agreed to share data for research (Filters out records with missing shareWithResearchAsOfDate).
@@ -38,7 +38,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Goal: Aggregate sensor data for machine learning analysis.
     - Logic: Join step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
 
-🛠 Glue Jobs Summary <br>
+## 🛠 Glue Jobs Summary <br>
 | Glue Job | Description|
 |:---:|:---:|
 | Customer Landing to Trusted.py | Filters customers with non-null shareWithResearchAsOfDate.|
@@ -47,7 +47,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 | Customer Trusted to Curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.|
 | Machine Learning Curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.|
 
-🔍 Row Counts (Validated via Athena)
+## 🔍 Row Counts (Validated via Athena)
  | Table	 | Row Count	 | Notes
  |:---:|:---:|:---:|
  | customer_landing	 | 956	 | Includes rows with missing shareWithResearchAsOfDate.
@@ -59,7 +59,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
  | customers_curated	 | 464	 | Joined customers with valid accelerometer data.
  | machine_learning_curated | 	34,437	 | Final dataset ready for ML.
 
-📁 Project Structure:<br>
+## 📁 Project Structure:<br>
 
 ├── Glue Jobs/ <br>
 │   ├── Customer Landing to Trusted.py <br> 
@@ -76,13 +76,13 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 │   ├── Athena queries showing row counts and joins<br>
 └── Readme.md
 
-💡 Key Learnings: 
+## 💡 Key Learnings: 
 1. Schema Evolution: Used Glue's dynamic schema update options for handling evolving JSON.
 2. Privacy-First Design: Ensured only users with explicit consent are retained throughout the pipeline.
 3. Efficient Joins in Glue Studio: SQL Transform nodes produced more consistent and performant outputs than built-in Join nodes.
 4. Partitioning & Filtering: Reduced unnecessary data writes by filtering and selecting relevant columns at each stage.
 
-📊 Technologies & Tools Used: <br>
+## 📊 Technologies & Tools Used: <br>
 1. AWS Glue Studio – Visual and code-based ETL orchestration
 2. Amazon Athena – Querying structured data in S3
 3. Amazon S3 – Scalable object storage for each data zone

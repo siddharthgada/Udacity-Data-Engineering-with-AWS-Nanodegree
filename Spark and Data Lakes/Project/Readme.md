@@ -38,7 +38,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Goal: Aggregate sensor data for machine learning analysis.
     - Logic: Join step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
 
-🛠 Glue Jobs Summary
+🛠 Glue Jobs Summary <br>
 |Glue Job | Description|
 |customer_landing_to_trusted.py | Filters customers with non-null shareWithResearchAsOfDate.|
 |accelerometer_landing_to_trusted.py | Joins raw accelerometer data with customer_trusted using email.|

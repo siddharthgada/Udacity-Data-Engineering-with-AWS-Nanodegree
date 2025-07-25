@@ -12,6 +12,14 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Website Form: customer_landing <br>
     - Mobile App: accelerometer_landing <br>
     - IoT Device: step_trainer_landing
+  
+## 📥 Table Creation & Data Loading
+- Created Landing Zone Glue tables for:
+    - customer_landing
+    - accelerometer_landing
+    - steptrainer_landing
+- Used AWS Glue to create the database and the above tables in the designated Glue Data Catalog Database.
+- Loaded raw JSON data directly from Amazon S3 into these tables, enabling downstream ETL transformations and querying via Athena.
     
 ## 🛠 Glue Jobs
 1. Landing to Trusted Zone
@@ -62,11 +70,11 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 ## 📁 Project Structure:<br>
 
 ├── Data Sources/ <br>
-│   ├── Accelerometer <br> 
+│   ├── Accelerometer/ <br> 
 │   ├──    ├── JSON Accelerometer data <br> 
-│   ├── Customer <br> 
+│   ├── Customer/ <br> 
 │   ├──    ├── JSON Customer data <br> 
-│   ├── Step_Trainer <br> 
+│   ├── Step_Trainer/ <br> 
 │   ├──    ├── JSON Step_Trainer data <br> 
 ├── Glue Jobs/ <br>
 │   ├── Customer Landing to Trusted.py <br> 
@@ -82,6 +90,11 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 │   ├── Glue Studio Job configurations<br>
 │   ├── Athena queries showing row counts and joins<br>
 └── Readme.md
+
+## 🛡️ AWS Configuration
+1. IAM Role: Custom IAM roles were created with least-privilege access to allow Glue Jobs to read/write to specific S3 buckets.
+2. VPC Endpoint: A VPC Gateway Endpoint was created for secure, high-throughput access from AWS Glue to S3, avoiding public internet.
+3. 
 
 ## 💡 Key Learnings: 
 1. Schema Evolution: Used Glue's dynamic schema update options for handling evolving JSON.

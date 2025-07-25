@@ -39,12 +39,12 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Logic: Join step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
 
 🛠 Glue Jobs Summary
-Glue Job | Description
-customer_landing_to_trusted.py | Filters customers with non-null shareWithResearchAsOfDate.
-accelerometer_landing_to_trusted.py | Joins raw accelerometer data with customer_trusted using email.
-customer_trusted_to_curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.
-step_trainer_landing_to_trusted.py | Filters IoT records for customers in customers_curated.
-machine_learning_curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
+|Glue Job | Description|
+|customer_landing_to_trusted.py | Filters customers with non-null shareWithResearchAsOfDate.|
+|accelerometer_landing_to_trusted.py | Joins raw accelerometer data with customer_trusted using email.|
+|customer_trusted_to_curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.|
+|step_trainer_landing_to_trusted.py | Filters IoT records for customers in customers_curated.|
+|machine_learning_curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.|
 
 🔍 Key Learning Outcomes: <br>
 📌 Designing NoSQL Databases <br>

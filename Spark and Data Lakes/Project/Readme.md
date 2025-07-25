@@ -7,10 +7,10 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 
 ✅ Project Pipeline <br>
 🧾 Data Sources (Landing Zone) <br>
--S3 JSON files for: <br>
---customer_landing <br>
---accelerometer_landing <br>
---step_trainer_landing
+- S3 JSON files for: <br>
+    - customer_landing <br>
+    - accelerometer_landing <br>
+    - step_trainer_landing
     
 2. ETL Pipeline Development
   - Implemented logic in Part I of the notebook to iterate through raw event files (event_datafile_new.csv) and processed them into a new, denormalized CSV format.

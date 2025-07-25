@@ -87,3 +87,9 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 2. Amazon Athena – Querying structured data in S3
 3. Amazon S3 – Scalable object storage for each data zone
 4. JSON – Source data format
+
+  ## 👤 Author
+
+**Siddharth Gada**  
+📧 Email: gadasiddharth@gmail.com <br>
+🔗 LinkedIn: https://www.linkedin.com/in/siddharthgada/

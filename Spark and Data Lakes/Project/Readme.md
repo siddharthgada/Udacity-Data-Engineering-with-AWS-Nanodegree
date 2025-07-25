@@ -61,6 +61,13 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 
 ## 📁 Project Structure:<br>
 
+├── Data Sources/ <br>
+│   ├── Accelerometer <br> 
+│   ├──    ├── JSON Accelerometer data <br> 
+│   ├── Customer <br> 
+│   ├──    ├── JSON Customer data <br> 
+│   ├── Step_Trainer <br> 
+│   ├──    ├── JSON Step_Trainer data <br> 
 ├── Glue Jobs/ <br>
 │   ├── Customer Landing to Trusted.py <br> 
 │   ├── Accelerometer Landing to Trusted.py <br>

@@ -39,13 +39,25 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Logic: Join step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
 
 🛠 Glue Jobs Summary <br>
-|Glue Job | Description|
+| Glue Job | Description|
 |:---:|:---:|
 | Customer Landing to Trusted.py | Filters customers with non-null shareWithResearchAsOfDate.|
 | Accelerometer Landing to Trusted.py | Joins raw accelerometer data with customer_trusted using email.|
 | Step Trainer Landing to Trusted.py | Filters IoT records for customers in customers_curated.|
 | Customer Trusted to Curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.|
-| achine Learning Curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.|
+| Machine Learning Curated.py | Joins step_trainer_trusted with accelerometer_trusted on sensorReadingTime.|
+
+🔍 Row Counts (Validated via Athena)
+ | Table	 | Row Count	 | Notes
+ |:---:|:---:|:---:|
+ | customer_landing	 | 956	 | Includes rows with missing shareWithResearchAsOfDate.
+ | customer_trusted	 | 482   | Filtered to only consenting users.
+ | accelerometer_landing | 	81,273	 | Raw accelerometer readings.
+ | accelerometer_trusted | 	32,025	 | Only data from users who opted in.
+ | step_trainer_landing | 	28,680	 | Raw IoT readings.
+ | step_trainer_trusted	 | 14,460	 | Data filtered by presence in customers_curated.
+ | customers_curated	 | 464	 | Joined customers with valid accelerometer data.
+ | machine_learning_curated | 	34,437	 | Final dataset ready for ML.
 
 🔍 Key Learning Outcomes: <br>
 📌 Designing NoSQL Databases <br>

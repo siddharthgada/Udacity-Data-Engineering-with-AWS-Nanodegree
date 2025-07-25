@@ -5,11 +5,11 @@ This repository contains my solution for a serverless data lake project using AW
 
 This project demonstrates a modern data lake architecture using AWS Glue to process and transform raw JSON data stored in S3 into clean, queryable formats accessible through Amazon Athena. The data represents customers, accelerometer sensor readings, and step trainer devices.
 
-✅ Project Pipeline
-🧾 Data Sources (Landing Zone)
--S3 JSON files for:
---customer_landing
---accelerometer_landing
+✅ Project Pipeline <br>
+🧾 Data Sources (Landing Zone) <br>
+-S3 JSON files for: <br>
+--customer_landing <br>
+--accelerometer_landing <br>
 --step_trainer_landing
     
 2. ETL Pipeline Development

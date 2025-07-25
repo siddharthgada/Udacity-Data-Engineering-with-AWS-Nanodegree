@@ -1,7 +1,7 @@
 # 🧠 AWS Glue Data Lake Project for Health & Fitness Tracking
 This repository contains my solution for a serverless data lake project using AWS Glue, Athena, and S3. The project simulates real-world data engineering tasks by ingesting JSON data from multiple sources, performing ETL transformations, filtering PII, and organizing the data into Landing, Trusted, and Curated zones.
 
-🚀 Project Overview:<br>
+## 🚀 Project Overview:<br>
 
 This project demonstrates a modern data lake architecture using AWS Glue to process and transform raw JSON data stored in S3 into clean, queryable formats accessible through Amazon Athena. The data represents customers, accelerometer sensor readings, and step trainer devices.
 

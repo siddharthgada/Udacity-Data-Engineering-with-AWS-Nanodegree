@@ -60,7 +60,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
  | machine_learning_curated | 	34,437	 | Final dataset ready for ML.
 
 📁 Project Structure:<br>
-.
+
 ├── Glue Jobs/ <br>
 │   ├── Customer Landing to Trusted.py <br> 
 │   ├── Accelerometer Landing to Trusted.py <br>
@@ -72,13 +72,9 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 │   ├── accelerometer_landing.sql<br>
 │   └── steptrainer_landing.sql<br>
 ├── Screenshots/<br>
-│   ├── athena_queries/<br>
+│   ├── Glue Studio Job configurations<br>
+│   ├── Athena queries showing row counts and joins<br>
 └── Readme.md
-
-📸 Screenshots
-📁 Located in /Screenshots:
-- Glue Studio Job configurations
-- Athena queries showing row counts and joins
 
 💡 Key Learnings: 
 1. Schema Evolution: Used Glue's dynamic schema update options for handling evolving JSON.

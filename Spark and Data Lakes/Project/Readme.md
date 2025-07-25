@@ -40,6 +40,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
 
 🛠 Glue Jobs Summary <br>
 |Glue Job | Description|
+|---|---|
 |customer_landing_to_trusted.py | Filters customers with non-null shareWithResearchAsOfDate.|
 |accelerometer_landing_to_trusted.py | Joins raw accelerometer data with customer_trusted using email.|
 |customer_trusted_to_curated.py | Joins customer_trusted with accelerometer_trusted to create customers_curated.|

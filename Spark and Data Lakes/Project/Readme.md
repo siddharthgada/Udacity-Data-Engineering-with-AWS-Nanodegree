@@ -37,14 +37,26 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
     - Goal: Store Step Trainer IoT records only for customers who have both accelerometer data and have agreed to share their data.
     - Logic: Inner join step_trainer_landing with customer_curated on serialNumber.
 
+### 🛠 Data Quality Fix: Step Trainer Serial Number Bug
+During data validation, a major data quality issue was discovered:
+
+The serialNumber field in the Customer data (Landing Zone) was not unique. Due to a defect in the fulfillment website, the same 30 serial numbers were reused across millions of customers. As a result, we cannot reliably associate Step Trainer IoT records with Customer records using serial numbers.
+
+However, the Step Trainer IoT data (Landing Zone) contains the correct serial numbers, enabling us to associate sensor readings with customers indirectly — by filtering only those customers who have corresponding accelerometer data and have consented to data sharing.
+
 2. Trusted to Curated Zone
 - Customer Trusted to Curated.py
-    - Goal: Identify customers who have both accelerometer data and have agreed to share their data.
-    - Logic: Join customer_trusted and accelerometer_trusted on email, keeping only customer fields.
+    - Input: customer_trusted (filtered for consent) and accelerometer_trusted (sensor data).
+    - Logic: Inner join on email to identify customers who have both given consent and submitted sensor data.
 
 - Machine Learning Curated.py
-    - Goal: Aggregate sensor data for machine learning analysis.
-    - Logic: Join step_trainer_trusted with accelerometer_trusted on sensorReadingTime.
+    - Input: step_trainer_landing and customers_curated.
+    - Logic: Inner join on serialNumber to retain only Step Trainer records from customers in the customers_curated dataset.
+
+### ✅ Benefits of the Fix
+- Ensures only valid, consenting users are included in downstream analytics.
+- Resolves serialNumber duplication issue by filtering via sensor activity, not fulfillment data.
+- Produces clean, trustworthy machine learning datasets for health tracking applications.
 
 ## 🛠 Glue Jobs Summary <br>
 | Glue Job | Description|
@@ -60,7 +72,7 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
  |:---:|:---:|:---:|
  | customer_landing	 | 956	 | Includes rows with missing shareWithResearchAsOfDate.
  | customer_trusted	 | 482   | Filtered to only consenting users.
- | customers_curated	 | 464	 | Joined customers with valid accelerometer data.
+ | customers_curated	 | 462	 | Joined customers with valid accelerometer data.
  | accelerometer_landing | 	81,273	 | Raw accelerometer readings.
  | accelerometer_trusted | 	40,981	 | Only data from users who opted in.
  | step_trainer_landing | 	28,680	 | Raw IoT readings.

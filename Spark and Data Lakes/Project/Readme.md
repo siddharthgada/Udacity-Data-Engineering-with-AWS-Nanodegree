@@ -60,12 +60,12 @@ This project demonstrates a modern data lake architecture using AWS Glue to proc
  |:---:|:---:|:---:|
  | customer_landing	 | 956	 | Includes rows with missing shareWithResearchAsOfDate.
  | customer_trusted	 | 482   | Filtered to only consenting users.
+ | customers_curated	 | 464	 | Joined customers with valid accelerometer data.
  | accelerometer_landing | 	81,273	 | Raw accelerometer readings.
- | accelerometer_trusted | 	32,025	 | Only data from users who opted in.
+ | accelerometer_trusted | 	40,981	 | Only data from users who opted in.
  | step_trainer_landing | 	28,680	 | Raw IoT readings.
  | step_trainer_trusted	 | 14,460	 | Data filtered by presence in customers_curated.
- | customers_curated	 | 464	 | Joined customers with valid accelerometer data.
- | machine_learning_curated | 	34,437	 | Final dataset ready for ML.
+ | machine_learning_curated | 	43,681	 | Final dataset ready for ML.
 
 ## 📁 Project Structure:<br>
 

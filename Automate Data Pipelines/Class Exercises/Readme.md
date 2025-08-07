@@ -1,1 +1,26 @@
+# To run the dags in L3, L4, L5 follow these steps:
+- Create IAM User (to give access to Airflow UI)
+- IAM User needs to have the following existing policies:
+  - AdministratorAccess
+  - AmazonRedshiftFullAccess
+  - AmazonS3FullAccess
+- Create an Access Key so that the credentials can be used to configure the AWS connection in Airflow
+- Create IAM Role (to give full access to S3)
+- IAM Role needs to have the following existing policies:
+  - AmazonS3FullAccess
+- Create a Redshift Serverless workspace and namespace
+  - Associate IAM role created while configuring the workspace and namespace
+  - Turn on enhanced VPC routing
+  - Edit the workspace to be publicly accessible
+  - Add an inbound rule to the VPC Security Group in EC2
+    - Type = Custom TCP
+    - Port range = 0 - 5500
+    - Source = Anywhere-iPv4
+- Configure S3 and copy source data to your own bucket
+- Set up Airflow connections:
+  - AWS credentials (Airflow Connections to AWS Account using the IAM User Access Key)
+  - Redshift connection (Airflow Connections to AWS Redshift using workspace endpoint)
+- Edit the S3_bucket and S3_key in the DAG to the bucket and key you created and have loaded the files in
+- Run the DAG from Airflow UI
+- Monitor task execution and logs
 

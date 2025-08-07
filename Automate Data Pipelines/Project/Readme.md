@@ -19,19 +19,19 @@ This project automates the data pipeline for Sparkify, a fictional music streami
 - Airflow UI – For monitoring DAG runs, viewing logs and triggering tasks manually
 
 ## 📁 Project Structure:<br>
-.
-├── dags/
-│   └── sparkify_dag.py              # Main Airflow DAG
-├── plugins/
-│   └── helpers/
-│       └── sql_queries.py          # SQL transformations
-│   └── operators/
-│       ├── stage_redshift.py       # StageToRedshiftOperator
-│       ├── load_fact.py            # LoadFactOperator
-│       ├── load_dimension.py       # LoadDimensionOperator
-│       └── data_quality.py         # DataQualityOperator
-├── final_project_dag_graph.jpg     # DAG visualization
-└── Readme.md
+. <br>
+├── dags/<br>
+│   └── sparkify_dag.py              # Main Airflow DAG<br>
+├── plugins/<br>
+│   └── helpers/<br>
+│       └── sql_queries.py          # SQL transformations<br>
+│   └── operators/<br>
+│       ├── stage_redshift.py       # StageToRedshiftOperator<br>
+│       ├── load_fact.py            # LoadFactOperator<br>
+│       ├── load_dimension.py       # LoadDimensionOperator<br>
+│       └── data_quality.py         # DataQualityOperator<br>
+├── final_project_dag_graph.jpg     # DAG visualization<br>
+└── Readme.md<br>
 
 ## ✅ Custom Airflow Operators: <br>
 |Operator	| Purpose|

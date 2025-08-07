@@ -1,87 +1,119 @@
-# Data Engineering
+# Data Engineering with AWS Nanodegree – Udacity
 
-## Data Modeling Course
-
-### Skills Acquired:
+## 1. Data Modeling Course
+**Skills Acquired**
 - Relational data modeling with PostgreSQL
-- How to create tables and insert data into PostgreSQL
+- Creating tables and inserting data into PostgreSQL
 - NoSQL data modeling with Apache Cassandra
-- How to create tables and insert data into Apache Cassandra
-- The process of database normalization and the normal forms.
-- Denormalization and when it should be used.
-- Fact vs dimension tables as a concept and how to apply that to our data modeling
-- How the star and snowflake schemas use the concepts of fact and dimension tables to make getting value out of the data easier.
-- Basics of Distributed Database Design
+- Creating tables and inserting data into Apache Cassandra
+- Database normalization and normal forms
+- Denormalization and when to use it
+- Fact vs. dimension tables and applying them in data modeling
+- Star and snowflake schemas for easier data analytics
+- Basics of distributed database design
 
-Proficiencies used: PostgreSQL, Apache Cassandra(CQL), Normalization, Denormalization
+**Proficiencies Used:** PostgreSQL, Apache Cassandra (CQL), Normalization, Denormalization
 
-### Project 1: NoSQL Databases - Data Modeling with Apache Cassandra
-Developed a NoSQL database using Apache Cassandra to model user activity data for a music streaming app. <br>
+**Project 1: NoSQL Databases – Data Modeling with Apache Cassandra**
+- Developed a NoSQL database using Apache Cassandra to model user activity data for a music streaming app.
+- Designed and implemented denormalized tables optimized for specific business queries.
+- Created CQL-based schemas and inserted query-ready datasets.
 
-Skills include:
-- Created a NoSQL database using Apache Cassandra
-- Developed denormalized tables optimized for a specific set of queries and business needs
+**Proficiencies Used:** Python, Apache Cassandra (CQL), Denormalization
 
-Proficiencies used: Python, Apache Cassandra(CQL), Denormalization
+---
 
-## Cloud Data Warehouse Course
+## 2. Cloud Data Warehouse Course
+**Skills Acquired**
+- ETL from 3NF database to Star Schema
+- OLAP cube operations (slice, dice, roll-up, drill-down)
+- ETL and ELT techniques in cloud environments
+- Relational and NoSQL databases in the cloud
+- AWS setup: IAM roles, S3 buckets, security groups, Redshift clusters
+- Redshift COPY command for bulk ingestion from S3
+- Parallel ETL and table design optimization (distribution & sort keys)
 
-### Skills Acquired:
-- Practiced ETL steps from a 3NF database to a Star Schema
-- Practiced slicing, dicing, Roll Up and Drill Down operations with OLAP cubes
-- Using ETL and ELT techniques
-- Using Relational and NoSQL databases in the cloud
-- Creating an IAM role and user, security group, S3 bucket, PostgreSQL Database
-- Launching a Redshift Cluster
-- How to ETL with Redshift
-- How to ingest data into Redshift using S3 buckets
-- Parallel ETL
-- Optimizing Table Design using Distribution Styles
+**Proficiencies Used:** SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, AWS IAM, Normalization, Denormalization
 
-Proficiencies used: SQL, PostgreSQL, AWS Redshift, AWS EC2, AWS S3, AWS IAM, Normalization, Denormalization
+**Project 2: Data Warehouse**
+- Built a cloud-based ETL pipeline and data warehouse for Sparkify, a fictional music streaming company.
+- Migrated raw JSON log and song data from S3 into AWS Redshift and modeled it using a star schema for analytical queries.
+- Designed fact (songplays) and dimension tables (users, songs, artists, time) in a star schema.
+- Optimized queries using distribution and sort keys.
+- Extracted JSON data from S3 and staged it in Redshift.
+- Transformed and loaded cleaned data into analytics tables using Python and SQL.
 
-### Project 2: Data Warehouse
-Built a cloud-based ETL pipeline and data warehouse for Sparkify, a fictional music streaming company. The goal was to migrate raw JSON log and song metadata from S3 into AWS Redshift and model the data using a star schema for analytical queries on user listening behavior. <br>
+**Proficiencies Used:** AWS Redshift, AWS S3, ETL, SQL, Star Schema, Python, psycopg2
 
-Skills include:
-- Designed fact (songplays) and dimension tables (users, songs, artists, time) based on the star schema.
-- Optimized for query performance using appropriate distribution and sort keys.
-- Developed denormalized tables optimized for a specific set of queries and business needs
-- Extracted raw JSON data from S3.
-- Loaded data into staging tables using Redshift COPY command.
-- Transformed and inserted cleaned data into final tables using Python and SQL.
+---
 
-Proficiencies used: AWS Redshift, AWS S3, ETL, SQL, Star Schema, Python, psycopg2
+## 3. Spark and Data Lakes Course
+**Skills Acquired**
+- Big Data foundations: Hadoop, MapReduce, Apache Spark, data lakes, and lakehouse architecture
+- Data wrangling with PySpark DataFrames and Spark SQL
+- AWS Glue integration with IAM, VPC, and S3
+- ETL pipeline orchestration in AWS Glue Studio
+- Lakehouse architecture: Landing, Trusted, and Curated zones
+- PII filtering and zone-based access control
+- Batch and streaming data joins for ML readiness
 
-## Spark And Data Lakes Course
+**Proficiencies Used:** Apache Spark, PySpark, Spark SQL, AWS Glue, S3, IAM, VPC, Data Lakehouse
 
-### Skills Acquired:
-- Big Data Foundations: Gained understanding of Hadoop, MapReduce, Apache Spark, and the principles of data lakes and lakehouse architecture.
-- Spark Data Processing: Practiced data wrangling using PySpark DataFrames and Spark SQL for scalable data transformations.
-- AWS Glue & Cloud Integration:
-  - Configured IAM roles, VPC endpoints, and permissions for secure Glue access to S3.
-  - Built and orchestrated Spark-based ETL pipelines using AWS Glue Studio.
-- Data Lakehouse Architecture:
-  - Implemented multi-zone lakehouse structure (Landing, Trusted, Curated).
-  - Filtered and transformed PII data according to zone-based access control.
-  - Joined batch and streaming datasets using Spark for machine learning readiness.
+**Project 3: STEDI Human Balance Analytics**
+- Built a serverless data lake architecture to process IoT sensor and customer balance data using AWS Glue and PySpark.
+- Designed multi-zone architecture (Landing → Trusted → Curated)
+- Filtered PII and kept only consented customers.
+- Joined IoT telemetry and customer datasets on timestamps for ML readiness.
+- Created Spark jobs with Glue Studio to manage schema evolution.
+- Queried transformed datasets using Amazon Athena.
 
-Proficiencies used: Apache Spark, PySpark, Spark SQL, AWS Glue, S3, IAM, VPC, Data Lakehouse
+**Proficiencies Used:** AWS Glue Studio, PySpark, Amazon S3, Athena, ETL, SQL, IAM, VPC
 
-### Project 3: STEDI Human Balance Analytics
-Built a serverless data lake architecture to process health and fitness telemetry data using AWS Glue and PySpark. Implemented multi-stage ETL pipelines to ingest, clean, and transform raw JSON data into queryable tables for machine learning analysis.
+---
 
-Skills include:
-- Designed multi-zone architecture (Landing → Trusted → Curated) on S3 and Glue.
-- Filtered PII and retained only customers who consented to data sharing.
-- Joined sensor and IoT data streams on timestamp for ML readiness.
-- Created Sprak jobs with Glue Studio to manage schema evolution and data manipulation.
-- Queried data using Amazon Athena.
+## 4. Automated Data Pipelines Course
+**Skills Acquired**
+- Workflow orchestration with Apache Airflow
+- Building modular, parameterized DAGs for ETL workflows
+- Creating reusable custom Python operators for staging, fact loading, dimension loading, and data quality checks
+- Automating ingestion from S3 to Amazon Redshift Serverless using COPY commands
+- Implementing automated data validation checks to ensure reliability
+- Supporting both append (incremental) and truncate (full refresh) load strategies
+- Applying Airflow best practices: retries, backfills, task dependencies, and parameterization
 
-Proficiencies used: AWS Glue Studio, PySpark, Amazon S3, Athena, ETL, SQL, IAM, VPC
+**Proficiencies Used:** Apache Airflow, Python, Amazon S3, Amazon Redshift Serverless, AWS IAM, SQL, ETL, Data Quality Checks
 
-  ## 👤 Author
+**Project 4: Data Pipelines with Airflow**
+- Built and deployed an automated ETL pipeline for Sparkify, orchestrating data ingestion from S3 to Redshift using Apache Airflow.
+- Developed parameterized Airflow DAGs with task dependencies and scheduling.
+- Created `StageToRedshiftOperator`, `LoadFactOperator`, `LoadDimensionOperator`, and `DataQualityOperator`.
+- Supported both append and truncate load strategies for dimensions.
+- Staged JSON data from S3 into Redshift staging tables.
+- Transformed and loaded data into star schema fact and dimension tables.
+- Configured Airflow connections and variables for dynamic runs.
+- Visualized and monitored DAG execution in the Airflow UI.
 
-**Siddharth Gada**  
-📧 Email: gadasiddharth@gmail.com <br>
-🔗 LinkedIn: https://www.linkedin.com/in/siddharthgada/
+**Proficiencies Used:** Apache Airflow, Python, Amazon S3, Amazon Redshift Serverless, SQL, ETL, AWS IAM, DAG Scheduling, VS Code
+
+---
+
+## Technologies Used Across the Nanodegree
+- **Programming & Query Languages:** Python, SQL, CQL
+- **Databases:** PostgreSQL, Apache Cassandra, Amazon Redshift, Amazon Redshift Serverless
+- **Big Data & Cloud Tools:** Apache Airflow, Apache Spark, AWS Glue, AWS S3, AWS IAM, AWS EC2, Amazon Athena
+- **Data Modeling:** Star Schema, Snowflake Schema, Normalization, Denormalization
+- **Development Tools:** VS Code, AWS CLI, Airflow UI, Glue Studio
+
+---
+
+## Key Learnings
+- Designing and implementing **data models** for both relational and NoSQL databases.
+- Building **ETL pipelines** to extract, transform, and load data into optimized schemas for analytics.
+- Leveraging **AWS cloud services** (S3, Redshift, Glue, Athena, IAM, EC2) for scalable data solutions.
+- Processing big data using **Apache Spark** and **PySpark** for distributed computation.
+- Implementing **data lake architectures** with Landing, Trusted, and Curated zones.
+- Orchestrating complex workflows using **Apache Airflow** with custom reusable operators.
+- Supporting **incremental (append)** and **full refresh (truncate)** load strategies in pipelines.
+- Ensuring **data quality** with automated validation checks before publishing datasets.
+- Applying **schema design best practices** for performance optimization in cloud warehouses.
+- Using **VS Code** and other modern development tools for collaborative, production-grade projects.

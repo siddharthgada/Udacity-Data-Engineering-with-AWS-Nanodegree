@@ -31,8 +31,8 @@ This project automates the data pipeline for Sparkify, a fictional music streami
 │       ├── load_fact.py                     # LoadFactOperator
 │       ├── load_dimension.py                # LoadDimensionOperator
 │       └── data_quality.py                  # DataQualityOperator
-├── final_project_dag_graph.jpg              # DAG visualization
-└── Readme.md                                # Project overview
+├── Readme.md                                # Project overview
+└── final_project_dag_graph.jpg              # DAG visualization
 ```
 
 ## ✅ Custom Airflow Operators: <br>

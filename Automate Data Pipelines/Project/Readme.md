@@ -20,18 +20,18 @@ This project automates the data pipeline for Sparkify, a fictional music streami
 
 ## 📁 Project Structure:<br>
 . <br>
-├── dags/<br>
-│   └── sparkify_dag.py  <br>            # Main Airflow DAG
-├── plugins/<br>
-│   └── helpers/<br>
-│       └── sql_queries.py <br>         # SQL transformations
-│   └── operators/<br>
-│       ├── stage_redshift.py <br>      # StageToRedshiftOperator
-│       ├── load_fact.py      <br>      # LoadFactOperator
-│       ├── load_dimension.py  <br>     # LoadDimensionOperator
-│       └── data_quality.py    <br>     # DataQualityOperator
-├── final_project_dag_graph.jpg <br>    # DAG visualization
-└── Readme.md<br>
+├── Dags/ <br>
+│ ├── sparkify_dag.py              # Main Airflow DAG <br>
+├── Plugins/<br>
+│ ├── helpers/<br>
+│ ├── ├── sql_queries.py           # SQL transformations <br>
+│ ├── operators/<br>
+│ ├── ├── stage_redshift.py        # StageToRedshiftOperator <br>
+│ ├── ├── load_fact.py             # LoadFactOperator <br>
+│ ├── ├── load_dimension.py        # LoadDimensionOperator <br>
+│ ├── ├── data_quality.py          # DataQualityOperator <br>
+├── final_project_dag_graph.jpg    # DAG visualization <br>
+├── Readme.md
 
 ## ✅ Custom Airflow Operators: <br>
 |Operator	| Purpose|

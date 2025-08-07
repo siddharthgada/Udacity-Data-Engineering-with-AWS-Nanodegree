@@ -20,7 +20,7 @@
 - Set up Airflow connections:
   - AWS credentials (Airflow Connections to AWS Account using the IAM User Access Key)
   - Redshift connection (Airflow Connections to AWS Redshift using workspace endpoint)
-- Edit the S3_bucket and S3_key in the DAG to the bucket and key you created and have loaded the files in
+- Edit the S3_bucket and S3_key in the DAG to the bucket and key you created and have loaded the files in (Not all dags need that, only where variables are not used and S3 path is hard coded
+- Create "s3_bucket" and "s3_key" variables in Airflow UI with s3_bucket having value of s3 bucket name and s3_key having the value of the sub-folder
 - Run the DAG from Airflow UI
 - Monitor task execution and logs
-

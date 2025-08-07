@@ -96,17 +96,17 @@ NOTE: These datasets can be copied onto your own S3 bucket (in the same AWS regi
 - Monitor task execution and logs
 
 ## 💡 Key Learnings: <br>
-1. Dynamic DAG Design
+1. Dynamic DAG Design <br>
 Learned how to create dynamic and modular DAGs in Apache Airflow using reusable custom operators, which improved maintainability and scalability.
-2. Custom Airflow Operators
+2. Custom Airflow Operators<br>
 Built custom Airflow operators to encapsulate business logic for staging, loading fact and dimension tables and performing data quality checks.
-3. Amazon Redshift Serverless Integration
+3. Amazon Redshift Serverless Integration<br>
 Gained experience configuring and using Redshift Serverless for loading and querying large datasets, and connecting Redshift to Airflow using Postgres hooks.
-4. Incremental Data Loads
+4. Incremental Data Loads<br>
 Implemented logic for append vs truncate loading strategies, with parameterized controls in dimension load operators to support historical and fresh data loads.
-5. Data Quality Validation
+5. Data Quality Validation<br>
 Developed reusable data quality checks to ensure reliability of data pipelines, including null checks and row count assertions.
-6. End-to-End AWS Workflow
+6. End-to-End AWS Workflow<br>
 Understood how various AWS services (S3, IAM and Redshift Serverless) work together in a data pipeline, including security and access configurations.
 
 ## 📈 Outcome: <br>

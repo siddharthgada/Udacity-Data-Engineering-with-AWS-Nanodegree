@@ -35,7 +35,7 @@ This project automates the data pipeline for Sparkify, a fictional music streami
 
 ## ✅ Custom Airflow Operators: <br>
 |Operator	| Purpose|
-|:---:|:---:|
+|:---|:---|
 | StageToRedshiftOperator	| Loads JSON data from S3 into Redshift staging tables using COPY command. |
 | LoadFactOperator	| Loads data into songplays fact table using append-only strategy. |
 | LoadDimensionOperator |	Loads data into dimension tables (users, songs, artists, time) with truncate or append option. |
